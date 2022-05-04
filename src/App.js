@@ -3,13 +3,12 @@ import './App.css';
 import Header from './componants/Header';
 import Footer from './componants/Footer';
 import Body from './componants/Body';
+import Home from './componants/Home';
 
 function App() {
   return (
     <div className="App">
-    <Header username="wael"></Header>
-     <Body thename="appName"/>
-     <Footer/>
+  <Home />
     </div>
   );
 }
