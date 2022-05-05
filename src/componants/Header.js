@@ -1,46 +1,52 @@
 import React from "react";
 
 import {useState} from "react";
-import { NavLink, Route, Router } from "react-router-dom";
 function Header(props){
 
     const [name,setName]=useState("wale"); // use state it use to can change the valrible
 
 
     return (
-
-  <header id="header" className="header fixed-top">
-    <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-      <a href="index.html" className="logo d-flex align-items-center">
-        <img src="./assets/img/logo.png" alt=""/>
-        <span>FlexStart</span>
-      </a>
-
-      <nav id="navbar" className="navbar">
-        <ul>
-     
-          <li><a className="nav-link scrollto active" href="#hero">@{props.username}</a></li>
-          <li><a className="nav-link scrollto" href="#" onClick={()=>setName("yazan")}>{name} </a></li>
-      <li></li>
-     
-          {/* <li> <Link  to="/">About</Link></li> */}
-          {/* <li><a className="nav-link scrollto" to="/">About</a></li> */}
-        {/* <li> <Link  to="/api">API</Link> </li> */}
-         
-          <li><a className="nav-link scrollto" href="#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-                  <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a className="getstarted scrollto" href="#about">Get Started</a></li>
-        </ul>
-        <i className="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      {/* <!-- .navbar --> */}
-
-    </div>
-    </header>
+    <div>
   
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="#">@{props.username}</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"> </span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#" onClick={()=>setName("yazan")}>{name}</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Link</a>
+        </li>
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a className="dropdown-item" href="#">Action</a></li>
+            <li><a className="dropdown-item" href="#">Another action</a></li>
+            <li></li>
+            <hr className="dropdown-divider"></hr>
+            <li><a className="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+      <form className="d-flex">
+        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <button className="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
     
-  );
+    </div>);
 }
 export default Header;
