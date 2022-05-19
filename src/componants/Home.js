@@ -4,6 +4,8 @@ import Header from "./Header";
 import Body from "./Body";
 import Footer from "./Footer";
 import ListsData from "./ListsData";
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
+
 function Home(){
 
 
@@ -24,9 +26,15 @@ useEffect(()=>{
     return(
 <div>
         <Header username="wael"/>
+
         <Body thename="appName"/>
         {/* <Footer  users={users} deleteItem={deleteItem}/> */}
-        <ListsData />
+       
+        <Routes>
+          <Route path="list" element={ <ListsData />} />
+        </Routes>
+
+    
         </div>
     );
 }
