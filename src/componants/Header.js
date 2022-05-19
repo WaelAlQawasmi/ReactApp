@@ -1,6 +1,7 @@
 import React from "react";
 
 import {useState} from "react";
+import { Link } from "react-router-dom";
 function Header(props){
 
     const [name,setName]=useState("wale"); // use state it use to can change the valrible
@@ -28,7 +29,9 @@ function Header(props){
             Dropdown
           </a>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a className="dropdown-item" href="#">Action</a></li>
+
+            <li><Link className="dropdown-item" to="/list">Action</Link></li>
+            
             <li><a className="dropdown-item" href="#">Another action</a></li>
             <li></li>
             <hr className="dropdown-divider"></hr>
